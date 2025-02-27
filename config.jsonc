@@ -27,12 +27,6 @@
             "type": "custom",
             "format": "├{$1} {#1}Software Information{#} {$1}┤"
         },
-        {
-            "type": "title",
-            "keyIcon": "",
-            "key": "Title",
-            "format": "{user-name}@{host-name}"
-        },
         "os",
         "kernel",
         "de",
