@@ -1,2 +1,2 @@
-mkdir -p ~/.config/fastfetch
-cp config.jsonc ~/.config/fastfetch/
+mkdir -p ~/.config/fastfetch  
+cp config.jsonc ~/.config/fastfetch/  
