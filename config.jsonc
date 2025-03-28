@@ -1,11 +1,11 @@
 {
     "logo": {
-        "source": "debian-linux_small",
+        "source": "Linux",
     },
     "display": {
         "separator": "  ",
         "constants": [
-            "─────────────────" // {$1}, used in Custom module
+            "───────────────────" // {$1}, used in Custom module
         ],
         "key": {
             "type": "icon",
