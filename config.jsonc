@@ -24,9 +24,10 @@
     { "type": "title",
       "format": "\u001b[33m{user-name}\u001b[0m\u001b[31m@\u001b[0m\u001b[32m{host-name}\u001b[0m \u001b[32m~\u001b[0m"
     },
-    { "type": "os",
-      "key": "  System",
-      "format": "{pretty-name}"
+    {
+      "type": "os",
+      "key": "󰌢  System",
+      "format": "{name} {version-id}"
     },
     { "type": "command",
       "key": "  Kernel",
@@ -38,7 +39,7 @@
       "format": "{process-name}"
     },
     { "type": "command",
-      "key": "󰌢  Desktop",
+      "key": "  Desktop",
       "shell": "/bin/sh",
       "text": "printf '%s (%s)\\n' \"${XDG_CURRENT_DESKTOP:-${DESKTOP_SESSION}}\" \"${XDG_SESSION_TYPE^}\""
     },
@@ -73,7 +74,7 @@
     // ── Colors ────────────────────────────────────────────
     {
       "type": "colors",
-      "key": "\u001b[97m\u001b[0m  \u001b[36mC\u001b[0m\u001b[35mo\u001b[0m\u001b[34ml\u001b[0m\u001b[33mo\u001b[0m\u001b[32mr\u001b[0m\u001b[31ms\u001b[0m",
+      "key": "  \u001b[36mC\u001b[0m\u001b[35mo\u001b[0m\u001b[34ml\u001b[0m\u001b[33mo\u001b[0m\u001b[32mr\u001b[0m\u001b[31ms\u001b[0m",
       "symbol": "circle",
       "block": { "count": 8 }
     },
