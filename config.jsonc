@@ -80,6 +80,6 @@
     },
 
     // blank line
-    { "type": "break" },
+    { "type": "break" }
   ]
 }
