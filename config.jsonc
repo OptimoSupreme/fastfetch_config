@@ -1,45 +1,84 @@
 {
-    "logo": {
-        "source": "Linux",
-    },
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+
+  "logo": {
+    "type": "builtin",
+    "source": "fedora_small",
+    "padding": { "top": 1, "right": 3 }
+  },
+
     "display": {
-        "separator": "  ",
-        "constants": [
-            "───────────────────" // {$1}, used in Custom module
-        ],
-        "key": {
-            "type": "icon",
-            "paddingLeft": 2
-        }
+      "separator": " ",
+      "key": { "width": 15 },
+      "color": {
+        "keys": "#7aa2ff",
+        "title": "#7aa2ff"
+      }
     },
-    "modules": [
-        {
-            "type": "custom",
-            "format": "┌{$1} {#1}Hardware Information{#} {$1}┐"
-        },
-        "host",
-        "cpu",
-        "gpu",
-        "disk",
-        "memory",
-        "swap",
-        {
-            "type": "custom",
-            "format": "├{$1} {#1}Software Information{#} {$1}┤"
-        },
-        "os",
-        "kernel",
-        "de",
-        "uptime",
-        "media",
-        {
-            "type": "custom",
-            "format": "└{$1}──────────────────────{$1}┘"
-        },
-        {
-            "type": "colors",
-            "paddingLeft": 2,
-            "symbol": "circle"
-        }
-    ]
+
+  "modules": [
+    // blank line
+    { "type": "break" },
+
+
+    { "type": "title",
+      "format": "\u001b[33m{user-name}\u001b[0m\u001b[31m@\u001b[0m\u001b[32m{host-name}\u001b[0m \u001b[32m~\u001b[0m"
+    },
+    { "type": "os",
+      "key": "  System",
+      "format": "{pretty-name}"
+    },
+    { "type": "command",
+      "key": "  Kernel",
+      "shell": "/bin/sh",
+      "text": "printf 'Linux %s (%s)\\n' \"$(uname -r | sed 's/-.*//')\" \"$(uname -m)\""
+    },
+    { "type": "shell",
+      "key": "  Shell",
+      "format": "{process-name}"
+    },
+    { "type": "command",
+      "key": "󰌢  Desktop",
+      "shell": "/bin/sh",
+      "text": "printf '%s (%s)\\n' \"${XDG_CURRENT_DESKTOP:-${DESKTOP_SESSION}}\" \"${XDG_SESSION_TYPE^}\""
+    },
+
+    // blank line
+    { "type": "break" },
+
+    // ── Hardware block ─────────────────────────────────────
+    {
+      "type": "command",
+      "key": "  CPU",
+      "shell": "/bin/sh",
+      "text": "printf '%s\\n' \"$(grep -m1 'model name' /proc/cpuinfo | sed -E 's/.*(i[0-9]-[0-9A-Z]+[KF]?).*/\\1/')\""
+    },
+    { "type": "gpu",
+      "key": "󰢮  GPU",
+      "format": "{name}"
+    },
+    { "type": "memory",
+      "key": "  Memory",
+      "format": "{used} / {total} ({percentage})"
+    },
+    { "type": "disk",
+      "key": "  Storage",
+      "folders": [ "/" ],
+      "format": "{size-used} / {size-total} ({size-percentage})"
+    },
+
+    // blank line
+    { "type": "break" },
+
+    // ── Colors ────────────────────────────────────────────
+    {
+      "type": "colors",
+      "key": "\u001b[97m\u001b[0m  \u001b[36mC\u001b[0m\u001b[35mo\u001b[0m\u001b[34ml\u001b[0m\u001b[33mo\u001b[0m\u001b[32mr\u001b[0m\u001b[31ms\u001b[0m",
+      "symbol": "circle",
+      "block": { "count": 8 }
+    },
+
+    // blank line
+    { "type": "break" },
+  ]
 }
