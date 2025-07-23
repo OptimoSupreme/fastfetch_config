@@ -4,7 +4,7 @@
   "logo": {
     "type": "builtin",
     "source": "fedora_small",
-    "padding": { "top": 1, "right": 3 }
+    "padding": { "top": 3, "right": 3 }
   },
 
     "display": {
@@ -17,13 +17,12 @@
     },
 
   "modules": [
-    // blank line
+
     { "type": "break" },
-
-
     { "type": "title",
       "format": "\u001b[33m{user-name}\u001b[0m\u001b[31m@\u001b[0m\u001b[32m{host-name}\u001b[0m \u001b[32m~\u001b[0m"
     },
+    { "type": "break" },
     {
       "type": "os",
       "key": "󰌢  System",
@@ -43,11 +42,7 @@
       "shell": "/bin/sh",
       "text": "printf '%s (%s)\\n' \"${XDG_CURRENT_DESKTOP:-${DESKTOP_SESSION}}\" \"${XDG_SESSION_TYPE^}\""
     },
-
-    // blank line
     { "type": "break" },
-
-    // ── Hardware block ─────────────────────────────────────
     {
       "type": "command",
       "key": "  CPU",
@@ -67,19 +62,13 @@
       "folders": [ "/" ],
       "format": "{size-used} / {size-total} ({size-percentage})"
     },
-
-    // blank line
     { "type": "break" },
-
-    // ── Colors ────────────────────────────────────────────
     {
       "type": "colors",
       "key": "  \u001b[36mC\u001b[0m\u001b[35mo\u001b[0m\u001b[34ml\u001b[0m\u001b[33mo\u001b[0m\u001b[32mr\u001b[0m\u001b[31ms\u001b[0m",
       "symbol": "circle",
       "block": { "count": 8 }
     },
-
-    // blank line
     { "type": "break" }
   ]
 }
