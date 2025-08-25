@@ -3,7 +3,7 @@
 
   "logo": {
     "type": "builtin",
-    "source": "fedora_small",
+    "source": "debian_small",
     "padding": { "top": 3, "right": 3 }
   },
 
@@ -11,8 +11,8 @@
       "separator": " ",
       "key": { "width": 15 },
       "color": {
-        "keys": "#7aa2ff",
-        "title": "#7aa2ff"
+        "keys": "38;2;122;162;255",
+        "title": "38;2;122;162;255"
       }
     },
 
