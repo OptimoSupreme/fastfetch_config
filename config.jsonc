@@ -26,9 +26,6 @@
       "type": "break"
     },
     {
-      "type": "break"
-    },
-    {
       "type": "os",
       "key": "      System",
       "format": "{name} {version-id}"
