@@ -73,6 +73,15 @@
         "/"
       ],
       "format": "{size-used} / {size-total} ({size-percentage})"
+    },
+    {
+      "type": "break"
+    },
+    {
+      "type": "break"
+    },
+    {
+      "type": "break"
     }
   ]
 }
