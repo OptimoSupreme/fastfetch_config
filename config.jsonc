@@ -4,7 +4,7 @@
     "type": "auto",
     "source": "~/.config/fastfetch/fastfetch_trademark.png",
     "padding": {
-      "top": 0,
+      "top": 1,
       "right": 0
     },
     "color": {
