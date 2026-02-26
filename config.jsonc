@@ -5,11 +5,14 @@
     "source": "~/.config/fastfetch/fastfetch_trademark.png",
     "padding": {
       "top": 1,
+      "left": 3,
       "right": 0
     },
     "color": {
       "1": "38;2;128;128;128"
-    }
+    },
+    "height": 6,
+    "preserveAspectRatio": true
   },
   "display": {
     "separator": "  ",
@@ -19,9 +22,6 @@
     }
   },
   "modules": [
-    {
-      "type": "break"
-    },
     {
       "type": "os",
       "key": "      System",
