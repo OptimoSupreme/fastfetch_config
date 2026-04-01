@@ -45,12 +45,6 @@
       "text": "awk '{d=int($1/86400);h=int($1%86400/3600);m=int($1%3600/60);if(d>0)printf\"%d %s\\n\",d,(d==1?\"Day\":\"Days\");else if(h>0)printf\"%d %s\\n\",h,(h==1?\"Hour\":\"Hours\");else printf\"%d %s\\n\",m,(m==1?\"Minute\":\"Minutes\")}' /proc/uptime"
     },
     {
-      "type": "command",
-      "key": "     Desktop",
-      "shell": "/bin/sh",
-      "text": "printf '%s (%s)\\n' \"${XDG_CURRENT_DESKTOP:-${DESKTOP_SESSION}}\" \"${XDG_SESSION_TYPE^}\""
-    },
-    {
       "type": "break"
     },
     {
