@@ -4,7 +4,7 @@
     "type": "auto",
     "source": "Debian_small",
     "padding": {
-      "top": 0,
+      "top": 1,
       "left": 3,
       "right": 0
     },
@@ -37,6 +37,12 @@
       "type": "shell",
       "key": "       Shell",
       "format": "{process-name}"
+    },
+    {
+      "type": "command",
+      "key": "      Uptime",
+      "shell": "/bin/sh",
+      "text": "awk '{d=int($1/86400);h=int($1%86400/3600);m=int($1%3600/60);if(d>0)printf\"%d %s\\n\",d,(d==1?\"Day\":\"Days\");else if(h>0)printf\"%d %s\\n\",h,(h==1?\"Hour\":\"Hours\");else printf\"%d %s\\n\",m,(m==1?\"Minute\":\"Minutes\")}' /proc/uptime"
     },
     {
       "type": "command",
