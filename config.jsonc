@@ -64,12 +64,10 @@
       "format": "{used} / {total} ({percentage})"
     },
     {
-      "type": "disk",
+      "type": "command",
       "key": "     Storage",
-      "folders": [
-        "/"
-      ],
-      "format": "{size-used} / {size-total} ({size-percentage})"
+      "shell": "/bin/sh",
+      "text": "if mountpoint -q /sysroot 2>/dev/null; then t=/sysroot; else t=/; fi; df -h \"$t\" | awk 'NR==2{printf \"%s / %s (%s)\", $3, $2, $5}'"
     },
     {
       "type": "break"
