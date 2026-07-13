@@ -4,8 +4,8 @@
     "type": "file",
     "source": "~/.config/fastfetch/logo.txt",
     "padding": {
-      "top": 1,
-      "left": 3,
+      "top": 0,
+      "left": 1,
       "right": 0
     },
     "color": {
@@ -22,6 +22,9 @@
     }
   },
   "modules": [
+    {
+      "type": "break"
+    },
     {
       "type": "os",
       "key": "      System",
