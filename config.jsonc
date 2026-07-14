@@ -55,7 +55,7 @@
       "type": "command",
       "key": "         CPU",
       "shell": "/bin/sh",
-      "text": "grep -m1 'model name' /proc/cpuinfo | sed -E 's/.*: //; s/ w\\/ .* Graphics//; s/ [0-9]+-Core Processor//'"
+      "text": "grep -m1 'model name' /proc/cpuinfo | sed -E 's/.*: //; s/\\(R\\)//g; s/\\(TM\\)//g; s/ w\\/ .* Graphics//; s/ [0-9]+-Core Processor//; s/  +/ /g; s/ +$//'"
     },
     {
       "type": "gpu",
