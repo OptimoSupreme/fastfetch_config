@@ -5,14 +5,12 @@
     "source": "~/.config/fastfetch/logo.txt",
     "padding": {
       "top": 0,
-      "left": 1,
-      "right": 0
+      "left": 5,
+      "right": 2
     },
     "color": {
       "1": "38;2;255;255;255"
-    },
-    "height": 6,
-    "preserveAspectRatio": true
+    }
   },
   "display": {
     "separator": "  ",
@@ -23,9 +21,6 @@
     }
   },
   "modules": [
-    {
-      "type": "break"
-    },
     {
       "type": "os",
       "key": "      System",
@@ -72,9 +67,6 @@
       "key": "     Storage",
       "shell": "/bin/sh",
       "text": "if mountpoint -q /sysroot 2>/dev/null; then t=/sysroot; else t=/; fi; df -h \"$t\" | awk 'NR==2{printf \"%s / %s (%s)\", $3, $2, $5}'"
-    },
-    {
-      "type": "break"
     }
   ]
 }
